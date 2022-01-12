@@ -31,9 +31,11 @@ class CreateGhCommandUseCase {
 
         console.log(`git commit -m "${commitText}"`)
 
-        await runCommand(`git push ${ghHttp}`)
+        await runCommand(`git remote add origin ${ghHttp}`)
 
-        console.log(`git push ${ghHttp}`)
+        await runCommand(`git push -u origin ${ghHttp}`)
+
+        console.log(`git push -u origin ${ghHttp}`)
 
         console.log("Commit and push done.")
     }
