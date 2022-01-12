@@ -33,7 +33,7 @@ class CreateGhCommandUseCase {
 
         //await runCommand(`git remote add origin ${ghHttp}`)
 
-        await runCommand(`git push -u origin ${ghHttp}`)
+        await runCommand(`git push -u origin main`)
 
         console.log(`git push -u origin main`)
 
